@@ -3,7 +3,7 @@ Data Preprocessing:
   並且利用下一天的close_price - 當天close_price來計算lable，若大於等於0則為漲否則為跌。
   中間也有嘗試過DROP其中一種PRICE來交叉比較，影響不大。
 Highest accuracy:
-  其中三個分類模型準確率幾乎一樣，我認為就算dataset改變也是如此情況，因為股票預測單看這些變數以及只
+  其中三個分類模型準確率幾乎一樣，神經網路略高一些，我認為就算dataset改變也是如此情況，因為股票預測單看這些變數以及只
   預測漲跌(1、0)太過於簡化，訓練模型有難度。
   SVM選用kernel為rbf，C=0.5，NN使用四層隱藏層。
 Improve:
