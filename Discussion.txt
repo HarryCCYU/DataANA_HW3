@@ -1,12 +1,17 @@
 Data Preprocessing:
   將股票資料中的open_price、close_price、high_price、low_price、volumn當作features，
   並且利用下一天的close_price - 當天close_price來計算lable，若大於等於0則為漲否則為跌。
+  中間也有嘗試過DROP其中一種PRICE來交叉比較，影響不大。
 Highest accuracy:
   其中三個分類模型準確率幾乎一樣，我認為就算dataset改變也是如此情況，因為股票預測單看這些變數以及只
   預測漲跌(1、0)太過於簡化，訓練模型有難度。
+  SVM選用kernel為rbf，C=0.5，NN使用四層隱藏層。
 Improve:
   改善方法有嘗試過將features增加成前五天的資料都一起當作當天的features，或是將今天的price減去昨天的
   price做改善，目前都沒有明顯增加準確率，另一種改善方式便是直接預測price而非只是預測0或1，但本次作業
   三個模型都不是預測數值型的模型，可以使用linearregression嘗試。
+檢討:
+  本次作業藥改善準確率，我認為還是需要多了解一些股票運作，直覺上使用PRICE預測漲跌太過簡化，若能使用
+  數值型預測或許能改善預測準確率，有或者能有更好的資料前處理，能多方嘗試比較。
 
 
